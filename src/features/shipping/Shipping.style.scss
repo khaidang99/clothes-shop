@@ -1,0 +1,116 @@
+.page-cart {
+  padding-top: 27px;
+  color: #888;
+  font-weight: 700;
+  .header-cart {
+    color: #000;
+    background-color: #f1f1f1;
+    font-family: GeometricExtraBold;
+    font-size: 23px;
+    margin: 0px 0px 20px 0px;
+    padding: 5px 20px 5px 20px;
+  }
+  .header-list {
+    padding: 15px 0;
+  }
+  .main-cart-right {
+    padding: 10px 20px 20px 20px;
+    .order-title {
+      font-weight: 500;
+      font-size: 20px;
+      padding-bottom: 5px;
+      margin-bottom: 10px;
+    }
+    .promo-code-title {
+      font-size: 17px;
+      padding: 10px 0;
+    }
+    .group-cart-selected {
+      padding-bottom: 20px;
+      margin-bottom: 15px;
+      .item-cart-seclected {
+        width: 100%;
+        .group-name-cart {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 3px;
+          .name-cart {
+            font-size: 17px;
+            font-weight: 500;
+          }
+          .price-cart {
+            font-size: 17px;
+            font-weight: 400;
+          }
+        }
+        .group-size-cart {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 3px;
+          .size-cart {
+            font-size: 15px;
+            font-weight: 400;
+          }
+          .quantity-cart {
+            font-size: 17px;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+    .group-total {
+      .text-total {
+        font-size: 17px;
+      }
+      .number-total {
+        font-size: 20px;
+        font-weight: 500;
+      }
+    }
+    .group-discount {
+      .text-total {
+        font-size: 17px;
+      }
+      .number-total {
+        font-size: 20px;
+        font-weight: 500;
+      }
+    }
+    .group-transport {
+      padding-bottom: 15px;
+      margin-bottom: 10px;
+      .text-transport {
+        font-size: 17px;
+      }
+      .number-transport {
+        font-size: 20px;
+        font-weight: 500;
+      }
+    }
+    .group-tottol-money {
+      padding: 15px 0;
+      padding-bottom: 20px;
+      .text-total {
+        font-size: 17px;
+      }
+      .number-total {
+        font-size: 25px;
+        font-weight: 600;
+        color: rgb(100, 99, 99);
+      }
+    }
+    .btn-paying {
+      width: 100%;
+      padding: 20px;
+      height: auto;
+      font-size: 18px;
+      font-weight: 400;
+      color: #ebf3f3;
+      background-color: #87b57b;
+    }
+  }
+}

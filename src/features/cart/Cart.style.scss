@@ -1,0 +1,75 @@
+.page-cart {
+  padding-top: 27px;
+  color: #888;
+  font-weight: 600;
+  .header-cart {
+    color: #000;
+    background-color: #f1f1f1;
+    font-family: GeometricExtraBold;
+    font-size: 23px;
+    margin: 0px 0px 20px 0px;
+    padding: 5px 20px 5px 20px;
+  }
+  .header-list {
+    padding: 15px 0;
+  }
+  .main-cart-right {
+    padding: 10px 20px 20px 20px;
+    .order-title {
+      font-weight: 500;
+      font-size: 20px;
+      padding-bottom: 5px;
+      margin-bottom: 10px;
+    }
+    .promo-code-title {
+      font-size: 17px;
+      padding: 10px 0;
+    }
+    .group-input-code {
+      padding-bottom: 20px;
+      margin-bottom: 15px;
+    }
+    .group-total {
+      .text-total {
+        font-size: 17px;
+      }
+      .number-total {
+        font-size: 20px;
+        font-weight: 500;
+      }
+    }
+    .group-discount {
+      .text-total {
+        font-size: 17px;
+      }
+      .number-total {
+        font-size: 20px;
+        font-weight: 500;
+      }
+    }
+    .group-discount {
+      padding-bottom: 20px;
+    }
+    .group-tottol-money {
+      padding: 15px 0;
+      padding-bottom: 20px;
+      .text-total {
+        font-size: 17px;
+      }
+      .number-total {
+        font-size: 25px;
+        font-weight: 600;
+        color: rgb(100, 99, 99);
+      }
+    }
+    .btn-paying {
+      width: 100%;
+      padding: 20px;
+      height: auto;
+      font-size: 18px;
+      font-weight: 400;
+      color: #ebf3f3;
+      background-color: #87b57b;
+    }
+  }
+}

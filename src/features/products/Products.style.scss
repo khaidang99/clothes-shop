@@ -1,0 +1,15 @@
+.page-products {
+    display: flex;
+    padding: 0 20px;
+    margin-top: 55px;
+    .wrapper-list-products {
+        width: 100%;
+        height: calc(100vh - 30px);
+        .showing {
+            padding: 15px 1rem;
+        }
+        .list-products {
+            padding: 15px;
+        }
+    }
+}

@@ -1,0 +1,36 @@
+#sidebar {
+    min-width: 300px;
+    border-right: 1px solid rgba($color: #706d6d, $alpha: 0.2);
+    padding: 35px 15px 10px;
+
+    .title {
+        font-size: 17px;
+    }
+
+    .list {
+        list-style: none;
+        padding-left: 10px;
+        color: #676a74;
+    }
+
+    .wrapper {
+        margin-bottom: 25px;
+    }
+
+    .wrapper-colors {
+        .list-colors {
+            .item-color {
+                display: flex;
+                align-items: center;
+                margin-bottom: 8px;
+                .color {
+                    border-radius: 50%;
+                    background-color: salmon;
+                    width: 20px;
+                    height: 20px;
+                    margin-right: 7px;
+                }
+            }
+        }
+    }
+}
