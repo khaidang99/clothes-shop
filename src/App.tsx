@@ -1,14 +1,26 @@
-import { Routes, Route } from "react-router-dom";
 import { Spin } from "antd";
 import { useSelector } from "react-redux";
+import { Route, Routes } from "react-router-dom";
 
-import { lazyComponent } from "router";
-import Header from "components/header/Header";
+import type { RootState } from "app/Store";
 import AdminAuth from "auth/AdminAuth";
-import type { RootState } from 'app/Store';
+import Header from "components/header/Header";
+import { lazyComponent } from "router";
+
+import firebase from "firebase/compat/app";
+import "firebase/compat/auth";
+
+// Configure Firebase.
+const config = {
+  apiKey: "AIzaSyCp2_Q9WqvVl04SDL9UT7mHVpPl-iHHzyk",
+  authDomain: "clothes-shop-38b51.firebaseapp.com",
+};
+
+firebase.initializeApp(config);
 
 function App() {
   const loading = useSelector((state: RootState) => state.common.loading);
+
   return (
     <div className="App">
       <Spin spinning={loading}>

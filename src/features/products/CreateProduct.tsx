@@ -68,8 +68,7 @@ function CreateProduct() {
   }, []);
 
   const onFinish = async (values: ValuesFormCreate) => {
-    var listBase64 : string[] = await convertFileToBase64(values.image);
-    console.log({ id: params.id, ...values, image: listBase64 });
+    var listBase64: string[] = await convertFileToBase64(values.image);
     dispatch(setLoadingFullPage(true));
     if (location.state && location.state.kind === "edit" && params.id) {
       const aa = await Product.updateProduct({
@@ -77,14 +76,12 @@ function CreateProduct() {
         ...values,
         image: listBase64,
       });
-      console.log(aa);
       dispatch(setLoadingFullPage(false));
       navigate("/admin");
     } else {
       const res = await dispatch(
         fetchCreateProduct({ ...values, image: listBase64 })
       );
-      console.log(res);
       dispatch(setLoadingFullPage(false));
       navigate("/admin");
     }
@@ -154,14 +151,14 @@ function CreateProduct() {
         name="price"
         label="Price product"
         placeholder="Price"
-        rules={[{ required: true, min :2, type: "number"}]}
+        rules={[{ required: true, min: 2, type: "number" }]}
       />
       <UploadImg name="image" label="image" rules={[{ required: true }]} />
       <InputNumberField
         name="countInStock"
         label="CountInStock"
         placeholder="CountInStock"
-        rules={[{ required: true, min: 0, type: "number"}]}
+        rules={[{ required: true, min: 0, type: "number" }]}
       />
       <SelectField
         name="brand"

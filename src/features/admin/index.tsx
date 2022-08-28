@@ -1,13 +1,13 @@
-import React, { useState } from "react";
+import { Button, Col, Row, Space } from "antd";
+import { useState } from "react";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import { Row, Col, Button, Space } from "antd";
-import { useSelector, useDispatch } from "react-redux";
 
 import { fetchCreateCategory } from "features/category/CategorySlice";
-import { useAddSizeMutation } from 'features/size/SizeSlice';
+import { useAddSizeMutation } from "features/size/SizeSlice";
 
-import ListProducts from "./listProducts/index";
 import ListCategories from "./listCategories/index";
+import ListProducts from "./listProducts/index";
 import ListSizes from "./listSizes/index";
 import ModalCreate from "./modal/index";
 
@@ -18,7 +18,7 @@ const CONSTANT = {
 
 function Admin() {
   const [isModalVisible, setIsModalVisible] = useState(false);
-  const [kindCreate, setKindCreate] = useState('');
+  const [kindCreate, setKindCreate] = useState("");
   const [addSize] = useAddSizeMutation();
 
   const dispatch = useDispatch();
@@ -33,7 +33,10 @@ function Admin() {
     setIsModalVisible(true);
   };
 
-  const handleCreate = async (values: {name: string, kind: typeof CONSTANT.CATEGORY | typeof CONSTANT.SIZE}) => {
+  const handleCreate = async (values: {
+    name: string;
+    kind: typeof CONSTANT.CATEGORY | typeof CONSTANT.SIZE;
+  }) => {
     const { name } = values;
     if (values.kind === CONSTANT.CATEGORY) {
       try {
@@ -44,7 +47,7 @@ function Admin() {
       }
     } else {
       try {
-        await addSize({name: name});
+        await addSize({ name: name });
         return true;
       } catch {
         return false;
@@ -54,16 +57,12 @@ function Admin() {
   const to = {
     pathname: "/admin/create-product",
     state: { from: "/admin" },
-  }
+  };
   return (
     <div className="p-xl-4 p-sm-2 mt-5">
       <Space className="pb-xl-3 pb-sm-2">
         <Button type="primary">
-          <Link
-            to={to}
-          >
-            Create Product
-          </Link>
+          <Link to={to}>Create Product</Link>
         </Button>
         <Button onClick={handleCreateCategory}>Create Category</Button>
         <Button type="dashed" onClick={handleCreateSize}>
@@ -78,10 +77,10 @@ function Admin() {
           <ListCategories />
         </Col>
         <Col md={24} xl={4} span={4}>
-          <ListSizes/>
+          <ListSizes />
         </Col>
       </Row>
-      
+
       <ModalCreate
         isModalVisible={isModalVisible}
         setIsModalVisible={setIsModalVisible}
